@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unit 6 – Dynamic Web App (AJAX)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="../../projects.html">← Back to Projects</a></p>
+    <div class="card">
+      <h1>Unit 6 – Dynamic Web Application (AJAX-style)</h1>
+      <p class="small">Demonstrates client-side validation and asynchronous content update without reloading the page.</p>
+    </div>
+
+    <div class="card">
+      <h2>Interactive Form</h2>
+      <form novalidate>
+        <label for="name">Name</label>
+        <input id="name" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" required>
+
+        <label for="comment">Comment</label>
+        <textarea id="comment" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+        <p id="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div class="card" id="output">
+      <h2>Response Area</h2>
+      <p class="small">After submission, this section updates dynamically.</p>
+    </div>
+
+    <div class="card">
+      <h2>Evidence</h2>
+      <ul>
+        <li>Validation error screenshot: <code>evidence/validation_error.png</code></li>
+        <li>Successful update screenshot: <code>evidence/success_update.png</code></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+body{font-family: system-ui, Arial, sans-serif; margin:0; padding:0;}
+.container{max-width:980px; margin:0 auto; padding:24px 18px 44px;}
+.card{border:1px solid #ddd; border-radius:12px; padding:16px; margin:14px 0;}
+label{display:block; font-weight:600; margin-top:10px;}
+input{width:100%; padding:10px; border-radius:10px; border:1px solid #bbb;}
+button{margin-top:12px; padding:10px 12px; border-radius:10px; border:1px solid #bbb; background:#f6f6f6; cursor:pointer;}
+.error{color:#b00020;}
+.success{color:#006b2a;}
+.small{color:#555; font-size:.95rem;}

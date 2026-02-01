@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Technologies Portfolio | Part A</title>
+  <meta name="description" content="Portfolio website linking to six independently coded units and evidence artefacts.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header" role="banner">
+  <div class="container navbar">
+    <div class="brand"><span class="brand-badge" aria-hidden="true"></span><span>Portfolio</span></div>
+    <button class="menu-btn" type="button" data-menu-btn aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav-links" data-nav-links role="navigation" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="worksheets.html">Weekly Evidence</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main" role="main">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-card">
+        <h1>Web Technologies Portfolio (Part A)</h1>
+        <p class="lead">
+          This portfolio consolidates the coursework into one marker-friendly website. Each coded unit is stored under
+          <code>portfolio_site/units/</code> and can be opened directly from the Projects page as evidence.
+        </p>
+        <div class="meta" aria-label="Key skills">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS (responsive)</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Evidence linking</span>
+        </div>
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn primary" href="projects.html">Open Projects (Units)</a>
+          <a class="btn" href="worksheets.html">Open Weekly Evidence</a>
+        </div>
+        <p class="help" style="margin-top:10px;">
+          Marker workflow: open <strong>Projects</strong> → click a unit → review implementation; open <strong>Weekly Evidence</strong> → view PDFs/screenshots.
+        </p>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/img/profile.jpeg" alt="Profile placeholder image. Replace with your own photo if preferred.">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Featured evidence slider">
+    <div class="container">
+      <h2 class="section-title">Featured Evidence (Placeholder)</h2>
+      <p class="lead">A simple JavaScript slider. Replace images with screenshots of completed work.</p>
+      <div class="card">
+        <div class="card-pad">
+          <div class="slider-frame">
+            <img data-slide src="assets/img/screenshots/unit9.png" alt="Evidence slide 1 placeholder">
+            <img data-slide hidden src="assets/img/screenshots/unit 1.jpeg" alt="Evidence slide 2 placeholder">
+            <img data-slide hidden src="assets/img/screenshots/unit 6.jpeg" alt="Evidence slide 3 placeholder">
+          </div>
+          <div class="slider-controls">
+            <button class="btn" type="button" data-prev>Previous</button>
+            <span class="chip" data-counter>1 / 3</span>
+            <button class="btn" type="button" data-next>Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <p>© <span id="year"></span> Web Technologies Portfolio (Part A).</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

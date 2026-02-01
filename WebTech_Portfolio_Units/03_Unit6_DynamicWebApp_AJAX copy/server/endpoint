@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="application/json; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+    StringBuilder json = new StringBuilder();
+    String line;
+    while ((line = request.getReader().readLine()) != null) {
+        json.append(line);
+    }
+
+    // Simulate server-side validation
+    if (json.toString().contains("title") && json.toString().contains("description") && json.toString().contains("priority")) {
+        response.setContentType("application/json");
+        response.getWriter().write("{ \"status\": \"ok\", \"message\": \"Submission successful!\" }");
+    } else {
+        response.setContentType("application/json");
+        response.getWriter().write("{ \"status\": \"error\", \"message\": \"Invalid input!\" }");
+    }
+%>

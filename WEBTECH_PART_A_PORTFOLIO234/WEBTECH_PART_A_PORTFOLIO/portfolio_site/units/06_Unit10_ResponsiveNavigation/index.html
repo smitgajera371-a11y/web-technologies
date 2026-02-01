@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unit 10 Task 1 – Responsive Navigation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="navbar">
+    <div class="brand">Unit 10 Navigation Demo</div>
+    <button class="menu-btn" type="button" data-menu-btn aria-expanded="false">Menu</button>
+
+    <nav aria-label="Primary">
+      <a href="../../projects.html">← Back to Projects</a>
+      <a href="#overview">Overview</a>
+      <a href="#features">Features</a>
+      <div class="dropdown">
+        <button type="button" data-dd-btn aria-expanded="false">More ▾</button>
+        <div class="dropdown-menu" data-dd-menu>
+          <a href="#accessibility">Accessibility</a>
+          <a href="#evidence">Evidence</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section id="overview" class="section">
+    <h1>Unit 10 Task 1 – Responsive Navigation</h1>
+    <p class="small">Demonstrates: responsive menu behaviour, a dropdown pattern, and smooth-scrolling anchors.</p>
+  </section>
+
+  <section id="features" class="section">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Responsive menu: collapses on small screens and toggles with a Menu button.</li>
+      <li>Dropdown menu: opens sub-links (“More”).</li>
+      <li>Smooth scrolling: anchor navigation uses browser smooth-scroll.</li>
+    </ul>
+  </section>
+
+  <section id="accessibility" class="section">
+    <h2>Accessibility Notes</h2>
+    <ul>
+      <li>Buttons include <code>aria-expanded</code> states.</li>
+      <li>Keyboard navigation is supported via standard focus behaviour.</li>
+      <li>Links use clear text labels.</li>
+    </ul>
+  </section>
+
+  <section id="evidence" class="section">
+    <h2>Evidence</h2>
+    <ul>
+      <li>Dropdown open screenshot: <code>evidence/dropdown_open.png</code></li>
+      <li>Mobile menu screenshot: <code>evidence/mobile_menu.png</code></li>
+    </ul>
+  </section>
+</main>
+
+<script src="nav.js"></script>
+</body>
+</html>

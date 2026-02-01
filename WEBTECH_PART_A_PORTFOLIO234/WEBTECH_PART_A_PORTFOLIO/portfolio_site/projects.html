@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects (Units) | Part A</title>
+  <meta name="description" content="Unit list. Clicking a unit opens its independent implementation.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header" role="banner">
+  <div class="container navbar">
+    <div class="brand"><span class="brand-badge" aria-hidden="true"></span><span>Portfolio</span></div>
+    <button class="menu-btn" type="button" data-menu-btn aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav-links" data-nav-links role="navigation" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="worksheets.html">Weekly Evidence</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main" role="main">
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Projects (Independently Coded Units)</h1>
+      <p class="lead">
+        Each card links to a unit entry page under <code>portfolio_site/units/</code>. Units are self-contained and can be reviewed independently.
+      </p>
+
+      <div class="meta" role="group" aria-label="Project filters" style="margin: 14px 0 18px;">
+        <button class="btn" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="btn" type="button" data-filter="html" aria-pressed="false">HTML</button>
+        <button class="btn" type="button" data-filter="js" aria-pressed="false">JavaScript</button>
+        <button class="btn" type="button" data-filter="server" aria-pressed="false">Server</button>
+        <button class="btn" type="button" data-filter="security" aria-pressed="false">Security</button>
+        <button class="btn" type="button" data-filter="media" aria-pressed="false">Media</button>
+        <button class="btn" type="button" data-filter="nav" aria-pressed="false">Navigation</button>
+      </div>
+
+      <div class="grid" aria-label="Unit cards">
+        <article class="card col-6" data-project data-tags="html">
+          <img src="assets/img/screenshots/unit 1.jpeg" alt="Unit 1 placeholder screenshot">
+          <div class="card-pad">
+            <h3 style="margin-top:0;">Unit 1 – Personal Profile</h3>
+            <p>Semantic single-page profile using headings, paragraphs, and lists.</p>
+            <div class="meta"><span class="chip">HTML</span></div>
+            <a class="btn primary" href="units/01_Unit1_PersonalProfile/MyProfile.html">Open Unit</a>
+          </div>
+        </article>
+
+        <article class="card col-6" data-project data-tags="server,html">
+          <img src="assets/img/screenshots/unit 6.jpeg" alt="Unit 5 placeholder screenshot">
+          <div class="card-pad">
+            <h3 style="margin-top:0;">Unit 5 – WAMP + PHP</h3>
+            <p>Local server setup and multi-page PHP site (packaged with run instructions + evidence placeholders).</p>
+            <div class="meta"><span class="chip">Server</span><span class="chip">PHP</span></div>
+            <a class="btn primary" href="units/02_Unit5_WAMP_PHP/unit_overview.html">Open Unit</a>
+          </div>
+        </article>
+
+        <article class="card col-6" data-project data-tags="js,server">
+          <img src="assets/img/screenshots/unit 6.jpeg" alt="Unit 6 placeholder screenshot">
+          <div class="card-pad">
+            <h3 style="margin-top:0;">Unit 6 – Dynamic Web App</h3>
+            <p>Client-side validation and asynchronous update (AJAX-style) with dynamic DOM updates.</p>
+            <div class="meta"><span class="chip">JavaScript</span></div>
+            <a class="btn primary" href="units/03_Unit6_DynamicWebApp/index.html">Open Unit</a>
+          </div>
+        </article>
+
+        <article class="card col-6" data-project data-tags="security,js,html">
+          <img src="assets/img/screenshots/unit9.png" alt="Unit 9 Task 1 placeholder screenshot">
+          <div class="card-pad">
+            <h3 style="margin-top:0;">Unit 9 Task 1 – Secure Registration</h3>
+            <p>Registration form with password policy + consent, and a short security rationale.</p>
+            <div class="meta"><span class="chip">Security</span><span class="chip">Validation</span></div>
+            <a class="btn primary" href="units/04_Unit9_SecureRegistration/register.html">Open Unit</a>
+          </div>
+        </article>
+
+        <article class="card col-6" data-project data-tags="media,html">
+          <img src="assets/img/screenshots/unit 8T2.jpeg" alt="Unit 8 placeholder screenshot">
+          <div class="card-pad">
+            <h3 style="margin-top:0;">Unit 8 – Multimedia</h3>
+            <p>Embedded video/audio, image gallery, and a minimal CSS animation to highlight a skill.</p>
+            <div class="meta"><span class="chip">Media</span><span class="chip">HTML5</span></div>
+            <a class="btn primary" href="units/05_Unit8_Multimedia/task2_portfolio.html">Open Unit</a>
+          </div>
+        </article>
+
+        <article class="card col-6" data-project data-tags="nav,js,html">
+          <img src="assets/img/screenshots/Unit 10.png" alt="Unit 10 placeholder screenshot">
+          <div class="card-pad">
+            <h3 style="margin-top:0;">Unit 10 Task 1 – Responsive Navigation</h3>
+            <p>Responsive navigation + dropdown pattern + smooth-scroll to sections.</p>
+            <div class="meta"><span class="chip">Navigation</span><span class="chip">Responsive</span></div>
+            <a class="btn primary" href="units/06_Unit10_ResponsiveNavigation/index.html">Open Unit</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <p>© <span id="year"></span> Web Technologies Portfolio (Part A).</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unit 9 Task 1 – Secure Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="../../projects.html">← Back to Projects</a></p>
+
+    <div class="card">
+      <h1>Unit 9 Task 1 – Secure Registration & Validation</h1>
+      <p class="small">
+        This form demonstrates stronger password rules and consent-based registration. Client-side validation improves usability,
+        but security requires server-side validation and password hashing in production.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Registration Form</h2>
+      <form novalidate>
+        <label for="email">Email</label>
+        <input id="email" type="email" required>
+
+        <label for="password">Password</label>
+        <input id="password" type="password" required>
+        <p class="small">Policy: ≥12 chars; uppercase; lowercase; number; symbol.</p>
+
+        <label for="confirm">Confirm Password</label>
+        <input id="confirm" type="password" required>
+
+        <label style="display:flex; gap:10px; align-items:flex-start; margin-top:12px;">
+          <input id="consent" type="checkbox" style="width:auto; margin-top:4px;">
+          <span>I agree to the privacy notice and confirm my data may be processed for account creation.</span>
+        </label>
+
+        <button type="submit">Create Account</button>
+        <p id="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Security rationale (brief)</h2>
+      <ul>
+        <li><strong>Plain-text password storage</strong> is unsafe because it exposes users immediately if a database is compromised.</li>
+        <li><strong>Production systems</strong> should store passwords using strong, salted hashing (e.g., bcrypt/Argon2) and validate on the server.</li>
+        <li><strong>Client-side validation</strong> supports usability but does not prevent malicious requests.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Evidence</h2>
+      <ul>
+        <li>Password policy error screenshot: <code>evidence/password_policy_error.png</code></li>
+        <li>Consent-required screenshot: <code>evidence/consent_required.png</code></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

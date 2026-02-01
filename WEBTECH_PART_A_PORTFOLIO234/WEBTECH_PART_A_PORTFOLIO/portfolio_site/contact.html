@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Part A</title>
+  <meta name="description" content="Contact form demonstrating JavaScript validation.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header" role="banner">
+  <div class="container navbar">
+    <div class="brand"><span class="brand-badge" aria-hidden="true"></span><span>Portfolio</span></div>
+    <button class="menu-btn" type="button" data-menu-btn aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav-links" data-nav-links role="navigation" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="worksheets.html">Weekly Evidence</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main" role="main">
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Contact</h1>
+      <p class="lead">This form demonstrates client-side validation using JavaScript (assessment evidence). No server submission is implemented.</p>
+
+      <div class="grid">
+        <div class="card col-6">
+          <div class="card-pad">
+            <form data-contact-form novalidate>
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required>
+                <div class="help">Minimum 2 characters.</div>
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required>
+                <div class="help">Use a valid email format.</div>
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+                <div class="help">Minimum 20 characters.</div>
+              </div>
+
+              <button class="btn primary" type="submit">Submit</button>
+              <p class="help" data-status aria-live="polite" style="margin-top:10px;"></p>
+            </form>
+          </div>
+        </div>
+
+        <aside class="card col-6">
+          <div class="card-pad">
+            <h3 style="margin-top:0;">Contact details (replace)</h3>
+            <ul>
+              <li>Email: gajera@gmail.com</li>
+              <li>GitHub: github</li>
+              <li>LinkedIn: linkedin</li>
+            </ul>
+            <p class="help">Keep personal data minimal</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <p>© <span id="year"></span> Web Technologies Portfolio (Part A).</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
